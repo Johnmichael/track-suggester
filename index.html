@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Track Suggester</title>
+  <title>Epicodus Sorting Hat</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/scripts.js"></script>
 </head>
-
 <body>
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" style="background:#d7f4fa !important">
       <h1 id="top">What's the right track for me?</h1></div>
-
     <form class="forminfo" id="questions">
       <div class="question">
+        <h3 class="titlequestion">My ideal job invovles</h3>
         <div class="radio">
-          <h3 class="titlequestion">My ideal job invovles</h3>
           <label><input type="radio" name="question1" value="ruby1">Building interactive web applications</label>
         </div>
         <div class="radio">
           <label><input type="radio" name="question1" value="php1">Building small sites for brands, businesses, and organizations </label>
         </div>
         <div class="radio">
-          <label><input type="radio" name="question1" value="csharp1">c# answer</label>
+          <label><input type="radio" name="question1" value="csharp1">Creating software</label>
         </div>
       </div>
       <div class="question">
+                  <h3 class="titlequestion">And I would prefer to work at</h3>
         <div class="radio">
-          <h3 class="titlequestion">And I would prefer to work at</h3>
           <label><input type="radio" name="question2" value="ruby2">Startups and smaller companies</label>
         </div>
         <div class="radio">
@@ -40,8 +37,8 @@
         </div>
       </div>
       <div class="question">
+                  <h3 class="titlequestion">I want to learn..</h3>
         <div class="radio">
-          <h3 class="titlequestion">I want to learn..</h3>
           <label><input type="radio" name="question3" value="ruby3">an easier to learn language.</label>
         </div>
         <div class="radio">
@@ -52,8 +49,8 @@
         </div>
       </div>
       <div class="question">
+                  <h3 class="titlequestion">Out of the 3, I most value</h3>
         <div class="radio">
-          <h3 class="titlequestion">Out of the 3, I most value</h3>
           <label><input type="radio" name="question4" value="ruby4">being elegant</label>
         </div>
         <div class="radio">
@@ -64,8 +61,8 @@
         </div>
       </div>
       <div class="question">
+        <h3 class="titlequestion">I want this quiz to show me the result of</h3>
         <div class="radio">
-          <h3 class="titlequestion">I have a preconceived favorable bias towards</h3>
           <label><input type="radio" name="question5" value="ruby5">Ruby</label>
         </div>
         <div class="radio">
@@ -74,15 +71,16 @@
         <div class="radio">
           <label><input type="radio" name="question5" value="csharp5">C#</label>
         </div>
+        <div class="radio">
+          <label><input type="radio" name="question5">Nevermind!</label>
+        </div>
       </div>
-      <button class:="btn-success" name="test" type="submit" id=submitbutton>Submit</button>
-      <div id="output">
-        <p>bottom text!</p>
-      </div>
+      <div class="textbreak"></div>
+            <div class="float_center"><button class="btn btn-info" type="submit" id=submitbutton>Submit</button></div>
     </form>
     <div class="output"></div>
+    <div class="border"></div>
     <div class="ruby">
-      <p class="langname">Ruby!</p>
       <h1>What is Ruby?</h1>
       <p>Ruby is a programming language focused on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. The Ruby programming language is most commonly used with the Ruby on Rails framework.&nbsp;</p>
       <p>Ruby and Rails are typically used by younger companies and startups, especially for building interactive web applications. Companies using Ruby and Rails who have hired Epicodus graduates include New Relic,&nbsp;LivingSocial, and SpendWell.</p>
@@ -100,7 +98,6 @@
       <p class="top"><a href="#top">Take the quiz again!</a></p>
     </div>
     <div class="php">
-      <p class="langname">PHP!</p>
       <h1>What is PHP?</h1>
       <p>PHP is a popular programming language used for web development, especially for content-heavy websites. It's most commonly used with content management systems like WordPress, Drupal, and Joomla, but is also used in many web applications and backends as well. Students who learn to code in PHP will be able to collect form data, generate dynamic page content, send and receive cookies, and much more.</p>
       <p>Intel, Metal Toad, and OpenSesame are all companies that use PHP and have hired Epicodus graduates in the past.&nbsp;</p>
@@ -118,7 +115,6 @@
       <p class="top"><a href="#top">Take the quiz again!</a></p>
     </div>
     <div class="csharp">
-      <p class="langname">C#!</p>
       <h1>What is C#?</h1>
       <p>The C# ("C sharp") programming language is most commonly used with the .NET framework. Students who are well-versed in C# programming can use it to create client applications, database applications, distributed components, and much more.</p>
       <p>Students who learn C# programming and combine it with their knowledge of the .NET framework can target larger enterprises, government agencies, and companies serving enterprise and government clients for employment.&nbsp;</p>
@@ -137,5 +133,6 @@
       <p class="top"><a href="#top">Take the quiz again!</a></p>
     </div>
   </div>
+  <div class="footerspace"></div>
 </body>
 </html>

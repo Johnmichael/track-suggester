@@ -1,40 +1,28 @@
 $(document).ready(function() {
 
- // identify answers as language 1, lan2, lan3...
-// totallan1 = how many times was lan1 selected * how strongly user feels about this question
-// if totallan1 > totallan2 > totallan3, then suggest lan1
-// if totallan 1 = totallan2 && > totallan3, then suggest lan1 and lan2
-// if total of all languages is =, then provide link to epicodus.com/blog/what-programming-langauge-should-i-learn (this will also be included in "further reading")
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
       &&
       location.hostname == this.hostname
     ) {
-      // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
       if (target.length) {
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
           var $target = $(target);
           $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
+          if ($target.is(":focus")) {
             return false;
           } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
+            $target.attr('tabindex','-1');
+            $target.focus();
           };
         });
       }
@@ -79,9 +67,9 @@ $('a[href*="#"]')
       if (answer4 === "php4") {$(phptotal =(parseInt(phptotal)+1))};
       if (answer4 === "csharp4") {$(csharptotal =(parseInt(csharptotal)+1))};
 
-      if (answer5 === "ruby5") {$(rubytotal =(parseInt(rubytotal)+1))};
-      if (answer5 === "php5") {$(phptotal =(parseInt(phptotal)+1))};
-      if (answer5 === "csharp5") {$(csharptotal =(parseInt(csharptotal)+1))};
+      if (answer5 === "ruby5") {$(rubytotal =(parseInt(rubytotal)+10))};
+      if (answer5 === "php5") {$(phptotal =(parseInt(phptotal)+10))};
+      if (answer5 === "csharp5") {$(csharptotal =(parseInt(csharptotal)+10))};
 
 
       // console.log(csharptotal + "csharp");
@@ -115,17 +103,3 @@ $('a[href*="#"]')
 
 });
 });
-
-
-    // $(".php").hide();
-    // $(".csharp").hide();
-
-
-
-    // } else if (phptotal > rubytotal && || csharptotal) {
-    //   $('.php').toggle();
-    // } else if (csharptotal > phptotal && || phptotal){
-    //   $('.csharp').toggle();
-    // }
-
-    // alert('working!');  debugger
