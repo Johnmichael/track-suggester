@@ -16,10 +16,16 @@ $(document).ready(function() {
     $(".php").hide();
     $(".csharp").hide();
     $('#output').hide();
+
     event.preventDefault();
+
     var answer1 = $("input:radio[name=question1]:checked").val();
     var answer2 = $("input:radio[name=question2]:checked").val();
     var answer3 = $("input:radio[name=question3]:checked").val();
+    var answer4 = $("input:radio[name=question4]:checked").val();
+    var answer5 = $("input:radio[name=question5]:checked").val();
+    // var mult1 = $("select:dropdown[name=mult]:selected").val();
+    // console.log(mult1) will try again later
 
       if (answer1 === "ruby1") {$(rubytotal =(parseInt(rubytotal)+1))};
       if (answer1 === "php1") {$(phptotal =(parseInt(phptotal)+1))};
@@ -33,8 +39,18 @@ $(document).ready(function() {
       if (answer3 === "php3") {$(phptotal =(parseInt(phptotal)+1))};
       if (answer3 === "csharp3") {$(csharptotal =(parseInt(csharptotal)+1))};
 
+      if (answer4 === "ruby4") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (answer4 === "php4") {$(phptotal =(parseInt(phptotal)+1))};
+      if (answer4 === "csharp4") {$(csharptotal =(parseInt(csharptotal)+1))};
+
+      if (answer5 === "ruby5") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (answer5 === "php5") {$(phptotal =(parseInt(phptotal)+1))};
+      if (answer5 === "csharp5") {$(csharptotal =(parseInt(csharptotal)+1))};
 
 
+      console.log(csharptotal + "csharp");
+      console.log(rubytotal + "ruby");
+      console.log(phptotal + "php");
 
 
 
