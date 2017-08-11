@@ -7,10 +7,13 @@ $(document).ready(function() {
 // if total of all languages is =, then provide link to epicodus.com/blog/what-programming-langauge-should-i-learn (this will also be included in "further reading")
 
 
+
   $("form").submit(function(event) {
     var rubytotal = 0
     var phptotal = 0
     var csharptotal = 0
+
+
 
     $(".ruby").hide();
     $(".php").hide();
@@ -26,7 +29,6 @@ $(document).ready(function() {
     var answer5 = $("input:radio[name=question5]:checked").val();
     // var mult1 = $("select:dropdown[name=mult]:selected").val();
     // console.log(mult1) will try again later
-
       if (answer1 === "ruby1") {$(rubytotal =(parseInt(rubytotal)+1))};
       if (answer1 === "php1") {$(phptotal =(parseInt(phptotal)+1))};
       if (answer1 === "csharp1") {$(csharptotal =(parseInt(csharptotal)+1))};
@@ -48,27 +50,27 @@ $(document).ready(function() {
       if (answer5 === "csharp5") {$(csharptotal =(parseInt(csharptotal)+1))};
 
 
-      console.log(csharptotal + "csharp");
-      console.log(rubytotal + "ruby");
-      console.log(phptotal + "php");
+      // console.log(csharptotal + "csharp");
+      // console.log(rubytotal + "ruby");       Debugging
+      // console.log(phptotal + "php");
 
 
 
     if (rubytotal === phptotal && rubytotal ===  csharptotal){
       $('#output').toggle();
-      $("#output").text("It looks like you are undecided! Consult Sorting Hat.");
+      $("#output").text("It looks like you are undecided! Consult Sorting Hat or try the quiz again.");
     }
     if (rubytotal === phptotal && rubytotal > csharptotal){
       $('#output').toggle();
-      $("#output").text("It looks like you you tied on Ruby and PHP! ");
+      $("#output").text("It looks like you you tied on Ruby/Rails and PHP/Drupal! ");
     }
     if (rubytotal === csharptotal && rubytotal > phptotal){
       $('#output').toggle();
-      $("#output").text("It looks like you you tied on Ruby and C#! ");
+      $("#output").text("It looks like you you tied on Ruby/Rails and C#! ");
     }
     if (phptotal === csharptotal && csharptotal > rubytotal){
       $('#output').toggle();
-      $("#output").text("It looks like you you tied on PHP and C#! ");
+      $("#output").text("It looks like you you tied on PHP/Drupal and C#/.Net! ");
     }
     if (rubytotal > phptotal && rubytotal > csharptotal) {
       $('.ruby').toggle();}
