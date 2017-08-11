@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Track Suggester</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Epicodus Track Suggester!</h1>
 
-      <!-- Layout -->
+<head>
+  <title>Track Suggester</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
 
-      <!-- introduction paragraph explaining what programming languages are, this quiz is for back-end development etc. This quiz is only a quiz, do not take this as the bible, and do not stress too much about what language is "the right one" -->
+<body>
+  <div class="container">
+    <h1>Epicodus Track Suggester!</h1>
 
-      <!-- form question one -->
-      <!-- form question two -->
-      <!-- form question three -->
+    <!-- Layout -->
+
+    <!-- introduction paragraph explaining what programming languages are, this quiz is for back-end development etc. This quiz is only a quiz, do not take this as the bible, and do not stress too much about what language is "the right one" -->
+
+    <!-- form question one -->
+    <!-- form question two -->
+    <!-- form question three -->
 
 
-      <!-- hidden, ruby result, introduction videos to ruby -->
-      <!-- hidden, c# result, introduction videos to c# -->
-      <!-- hidden, php result, introduction videos to php -->
-      <!-- hidden, undecided result, epicodus blog article -->
+    <!-- hidden, ruby result, introduction videos to ruby -->
+    <!-- hidden, c# result, introduction videos to c# -->
+    <!-- hidden, php result, introduction videos to php -->
+    <!-- hidden, undecided result, epicodus blog article -->
 
-    </div>
-  </body>
+    <form>
+      <div class="form-group">
+        <label for="exampleSelect1">Language</label>
+          <p> I would perfer working <select class="form-control" id="q1ans"> </p>
+          <option>in a cubicle</option>
+          <option>in a forest</option>
+          <option>by myself</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleSelect1"></label>
+          <p>, and I <select class="form-control" id="q1mult">
+          <option>feel strongly about this.</option>
+          <option>somewhat care about this.</option>
+          <option>don't really care about this.</option>
+        </select></p>
+      </div>
+
+      <button class:="btn-success" type="submit">Submit</button>
+      <div class="questionform" id="output"></div>
+
+    </form>
+
+
+
+
+  <div class="ruby">
+    <p class="langname">This is the ruby placeholder</p>
+  </div>
+  <div class="php">
+    <p class="langname">This is php placeholder</p>
+  </div>
+  <div class="csharp">
+    <p class="langname">This is csharp placeholder</p>
+  </div>
+
+
+
+
+
+
+
+  </div>
+</body>
+
 </html>
