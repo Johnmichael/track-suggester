@@ -8,13 +8,58 @@ $(document).ready(function() {
 
 
   $("form").submit(function(event) {
+    var rubytotal = 0
+    var phptotal = 0
+    var csharptotal = 0
 
     $(".ruby").hide();
     $(".php").hide();
     $(".csharp").hide();
-
+    $('#output').hide();
     event.preventDefault();
-    $(".ruby").toggle();
+    var total1 = $("input:radio[name=question1]:checked").val();
+    var total2 = $("input:radio[name=question2]:checked").val();
+    var total3 = $("input:radio[name=question3]:checked").val();
+
+      if (total1 === "ruby1") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (total1 === "php1") {$(phptotal =(parseInt(phptotal)+1))};
+      if (total1 === "csharp1") {$(csharptotal =(parseInt(csharptotal)+1))};
+
+      if (total2 === "ruby2") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (total2 === "php2") {$(phptotal =(parseInt(phptotal)+1))};
+      if (total2 === "csharp2") {$(csharptotal =(parseInt(csharptotal)+1))};
+
+      if (total3 === "ruby3") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (total3 === "php3") {$(phptotal =(parseInt(phptotal)+1))};
+      if (total3 === "csharp3") {$(csharptotal =(parseInt(csharptotal)+1))};
+
+
+
+
+
+
+    if (rubytotal === phptotal && rubytotal ===  csharptotal){
+      $('#output').toggle();
+      $("#output").text("It looks like you are undecided! Consult Sorting Hat.");
+    }
+    if (rubytotal === phptotal && rubytotal > csharptotal){
+      $('#output').toggle();
+      $("#output").text("It looks like you you tied on Ruby and PHP! ");
+    }
+    if (rubytotal === csharptotal && rubytotal > phptotal){
+      $('#output').toggle();
+      $("#output").text("It looks like you you tied on Ruby and C#! ");
+    }
+    if (phptotal === csharptotal && csharptotal > rubytotal){
+      $('#output').toggle();
+      $("#output").text("It looks like you you tied on PHP and C#! ");
+    }
+    if (rubytotal > phptotal && rubytotal > csharptotal) {
+      $('.ruby').toggle();}
+    if (phptotal > csharptotal && phptotal > rubytotal) {
+      $('.php').toggle();}
+    if (csharptotal > rubytotal && csharptotal > phptotal) {
+      $('.csharp').toggle();}
 
 });
 });
@@ -23,14 +68,11 @@ $(document).ready(function() {
     // $(".csharp").hide();
 
 
-    // if (rubytotal > phptotal && || csharptotal) {
-    //   $('.ruby').toggle();
+
     // } else if (phptotal > rubytotal && || csharptotal) {
     //   $('.php').toggle();
     // } else if (csharptotal > phptotal && || phptotal){
     //   $('.csharp').toggle();
     // }
-
-
 
     // alert('working!');  debugger
