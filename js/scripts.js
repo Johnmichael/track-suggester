@@ -7,5 +7,30 @@ $(document).ready(function() {
 // if total of all languages is =, then provide link to epicodus.com/blog/what-programming-langauge-should-i-learn (this will also be included in "further reading")
 
 
+  $("form").submit(function(event) {
+
+    $(".ruby").hide();
+    $(".php").hide();
+    $(".csharp").hide();
+
+    event.preventDefault();
+    $(".ruby").toggle();
 
 });
+});
+
+    // $(".php").hide();
+    // $(".csharp").hide();
+
+
+    // if (rubytotal > phptotal && || csharptotal) {
+    //   $('.ruby').toggle();
+    // } else if (phptotal > rubytotal && || csharptotal) {
+    //   $('.php').toggle();
+    // } else if (csharptotal > phptotal && || phptotal){
+    //   $('.csharp').toggle();
+    // }
+
+
+
+    // alert('working!');  debugger
