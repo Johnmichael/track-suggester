@@ -17,21 +17,21 @@ $(document).ready(function() {
     $(".csharp").hide();
     $('#output').hide();
     event.preventDefault();
-    var total1 = $("input:radio[name=question1]:checked").val();
-    var total2 = $("input:radio[name=question2]:checked").val();
-    var total3 = $("input:radio[name=question3]:checked").val();
+    var answer1 = $("input:radio[name=question1]:checked").val();
+    var answer2 = $("input:radio[name=question2]:checked").val();
+    var answer3 = $("input:radio[name=question3]:checked").val();
 
-      if (total1 === "ruby1") {$(rubytotal =(parseInt(rubytotal)+1))};
-      if (total1 === "php1") {$(phptotal =(parseInt(phptotal)+1))};
-      if (total1 === "csharp1") {$(csharptotal =(parseInt(csharptotal)+1))};
+      if (answer1 === "ruby1") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (answer1 === "php1") {$(phptotal =(parseInt(phptotal)+1))};
+      if (answer1 === "csharp1") {$(csharptotal =(parseInt(csharptotal)+1))};
 
-      if (total2 === "ruby2") {$(rubytotal =(parseInt(rubytotal)+1))};
-      if (total2 === "php2") {$(phptotal =(parseInt(phptotal)+1))};
-      if (total2 === "csharp2") {$(csharptotal =(parseInt(csharptotal)+1))};
+      if (answer2 === "ruby2") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (answer2 === "php2") {$(phptotal =(parseInt(phptotal)+1))};
+      if (answer2 === "csharp2") {$(csharptotal =(parseInt(csharptotal)+1))};
 
-      if (total3 === "ruby3") {$(rubytotal =(parseInt(rubytotal)+1))};
-      if (total3 === "php3") {$(phptotal =(parseInt(phptotal)+1))};
-      if (total3 === "csharp3") {$(csharptotal =(parseInt(csharptotal)+1))};
+      if (answer3 === "ruby3") {$(rubytotal =(parseInt(rubytotal)+1))};
+      if (answer3 === "php3") {$(phptotal =(parseInt(phptotal)+1))};
+      if (answer3 === "csharp3") {$(csharptotal =(parseInt(csharptotal)+1))};
 
 
 
