@@ -5,7 +5,41 @@ $(document).ready(function() {
 // if totallan1 > totallan2 > totallan3, then suggest lan1
 // if totallan 1 = totallan2 && > totallan3, then suggest lan1 and lan2
 // if total of all languages is =, then provide link to epicodus.com/blog/what-programming-langauge-should-i-learn (this will also be included in "further reading")
-
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 
 
   $("form").submit(function(event) {
@@ -81,6 +115,7 @@ $(document).ready(function() {
 
 });
 });
+
 
     // $(".php").hide();
     // $(".csharp").hide();
