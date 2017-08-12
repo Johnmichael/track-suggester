@@ -11,9 +11,9 @@ $(document).ready(function() {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
-          event.preventDefault();
+          event.preventDefault();                                               // This is what I've been using for smooth scroll, I understand this is a bit overkill for one link.
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top                                      // Source: https://css-tricks.com/snippets/jquery/smooth-scrolling/
           }, 1000, function() {
             var $target = $(target);
             $target.focus();
@@ -41,8 +41,6 @@ $(document).ready(function() {
     var answer3 = $("input:radio[name=question3]:checked").val();
     var answer4 = $("input:radio[name=question4]:checked").val();
     var answer5 = $("input:radio[name=question5]:checked").val();
-    // var mult1 = $("select:dropdown[name=mult]:selected").val();
-    // console.log(mult1) will try again later
     if (answer1 === "ruby1") {
       $(rubytotal = (parseInt(rubytotal) + 1))
     };
@@ -92,9 +90,15 @@ $(document).ready(function() {
     if (answer5 === "csharp5") {
       $(csharptotal = (parseInt(csharptotal) + 10))
     };
-
+    if (rubytotal > phptotal && rubytotal > csharptotal) {
+      $('.ruby').toggle();}
+    if (phptotal > csharptotal && phptotal > rubytotal) {
+      $('.php').toggle();}
+    if (csharptotal > rubytotal && csharptotal > phptotal) {
+      $('.csharp').toggle();}
   });
 });
+
 
 
 
@@ -117,13 +121,6 @@ $(document).ready(function() {
 //   $('#output').toggle();
 //   $("#output").text("It looks like you you tied on PHP/Drupal and C#/.Net! ");
 // }
-// if (rubytotal > phptotal && rubytotal > csharptotal) {
-//   $('.ruby').toggle();}
-// if (phptotal > csharptotal && phptotal > rubytotal) {
-//   $('.php').toggle();}
-// if (csharptotal > rubytotal && csharptotal > phptotal) {
-//   $('.csharp').toggle();}
-
 // console.log(csharptotal + "csharp");
 // console.log(rubytotal + "ruby");       Debugging
 // console.log(phptotal + "php");
