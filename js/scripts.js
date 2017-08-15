@@ -22,15 +22,15 @@ $(document).ready(function() {
             } else {
               $target.attr('tabindex', '-1');
               $target.focus();
-            };
+            }
           });
         }
       }
     });
   $("form").submit(function(event) {
-    var rubytotal = 0
-    var phptotal = 0
-    var csharptotal = 0
+    var rubytotal = 0;
+    var phptotal = 0;
+    var csharptotal = 0;
     $(".ruby").hide();
     $(".php").hide();
     $(".csharp").hide();
@@ -42,54 +42,54 @@ $(document).ready(function() {
     var answer4 = $("input:radio[name=question4]:checked").val();
     var answer5 = $("input:radio[name=question5]:checked").val();
     if (answer1 === "ruby1") {
-      $(rubytotal = (parseInt(rubytotal) + 1))
-    };
+      $(rubytotal = (parseInt(rubytotal) + 1));
+    }
     if (answer1 === "php1") {
-      $(phptotal = (parseInt(phptotal) + 1))
-    };
+      $(phptotal = (parseInt(phptotal) + 1));
+    }
     if (answer1 === "csharp1") {
-      $(csharptotal = (parseInt(csharptotal) + 1))
-    };
+      $(csharptotal = (parseInt(csharptotal) + 1));
+    }
 
     if (answer2 === "ruby2") {
-      $(rubytotal = (parseInt(rubytotal) + 1))
-    };
+      $(rubytotal = (parseInt(rubytotal) + 1));
+    }
     if (answer2 === "php2") {
-      $(phptotal = (parseInt(phptotal) + 1))
-    };
+      $(phptotal = (parseInt(phptotal) + 1));
+    }
     if (answer2 === "csharp2") {
-      $(csharptotal = (parseInt(csharptotal) + 1))
-    };
+      $(csharptotal = (parseInt(csharptotal) + 1));
+    }
 
     if (answer3 === "ruby3") {
-      $(rubytotal = (parseInt(rubytotal) + 1))
-    };
+      $(rubytotal = (parseInt(rubytotal) + 1));
+    }
     if (answer3 === "php3") {
-      $(phptotal = (parseInt(phptotal) + 1))
-    };
+      $(phptotal = (parseInt(phptotal) + 1));
+    }
     if (answer3 === "csharp3") {
-      $(csharptotal = (parseInt(csharptotal) + 1))
-    };
+      $(csharptotal = (parseInt(csharptotal) + 1));
+    }
 
     if (answer4 === "ruby4") {
-      $(rubytotal = (parseInt(rubytotal) + 1))
-    };
+      $(rubytotal = (parseInt(rubytotal) + 1));
+    }
     if (answer4 === "php4") {
-      $(phptotal = (parseInt(phptotal) + 1))
-    };
+      $(phptotal = (parseInt(phptotal) + 1));
+    }
     if (answer4 === "csharp4") {
-      $(csharptotal = (parseInt(csharptotal) + 1))
-    };
+      $(csharptotal = (parseInt(csharptotal) + 1));
+    }
 
     if (answer5 === "ruby5") {
-      $(rubytotal = (parseInt(rubytotal) + 10))
-    };
+      $(rubytotal = (parseInt(rubytotal) + 10));
+    }
     if (answer5 === "php5") {
-      $(phptotal = (parseInt(phptotal) + 10))
-    };
+      $(phptotal = (parseInt(phptotal) + 10));
+    }
     if (answer5 === "csharp5") {
-      $(csharptotal = (parseInt(csharptotal) + 10))
-    };
+      $(csharptotal = (parseInt(csharptotal) + 10));
+    }
     if (rubytotal > phptotal && rubytotal > csharptotal) {
       $('.ruby').toggle();}
     if (phptotal > csharptotal && phptotal > rubytotal) {
