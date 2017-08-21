@@ -91,11 +91,14 @@ $(document).ready(function() {
       $(csharptotal = (parseInt(csharptotal) + 10));
     }
     if (rubytotal > phptotal && rubytotal > csharptotal) {
-      $('.ruby').toggle();}
+      $('.ruby').toggle();
+    }
     if (phptotal > csharptotal && phptotal > rubytotal) {
-      $('.php').toggle();}
+      $('.php').toggle();
+    }
     if (csharptotal > rubytotal && csharptotal > phptotal) {
-      $('.csharp').toggle();}
+      $('.csharp').toggle();
+    }
   });
 });
 
